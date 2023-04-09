@@ -14,9 +14,20 @@ function ListProjectsPage() {
 
     return (
         <div>
-            {projects?.map(project => (
-                <ProjectListItem key={project.id} project={project} />
-            ))}
+            <table border={1}>
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {projects?.map(project => (
+                    <ProjectListItem key={project.id} project={project} />
+                ))}
+                </tbody>
+            </table>
         </div>
     );
 }
